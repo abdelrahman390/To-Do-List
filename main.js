@@ -86,6 +86,10 @@ if (window.localStorage.getItem("name")){
 
                     cerh1.innerHTML = input.value
 
+                                location.reload() = function (){
+                                document.querySelector(".input").focus();
+            }
+
             input.value = ""
             
         }
@@ -97,7 +101,7 @@ if (window.localStorage.getItem("name")){
 
 // delet task from page
 let button = document.querySelectorAll(".dilButton")
-
+console.log(document.querySelector(".dilButton"))
 button.forEach((t) =>{
 
     t.onclick = function () {
@@ -109,17 +113,17 @@ button.forEach((t) =>{
 
                 for(i = 0; i <= myArray.length; i ++){
         
-                    console.log(`${items[i].name} === ${t.id}`)
+                    // console.log(`${items[i].name} === ${t.id}`)
                     let testmyArray = myArray.filter((task) => task.name != t.id)
-                    console.log(testmyArray) 
+                    // console.log(testmyArray) 
                     myArray = testmyArray
-                    console.log(myArray)
+                    // console.log(myArray)
                     localStorage.setItem("name", JSON.stringify(myArray))
-
                 }
-    }
+        }
 })
 
 reset.onclick = function  (){
     window.localStorage.clear()
+    location.reload()
 }
