@@ -55,6 +55,12 @@
     border-radius: 10px;
 }
 
+.task-box h5{
+    margin: 10px 0 0 0;
+    color: #379c37;
+    text-align: left;
+}
+
 .dilButton{
     border: none;
     background-color: red;
